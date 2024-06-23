@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mon-stat-block">
+        <div class="mon-stat-block__header">
+            <div class="mon-stat-block__name">
+                <a class="mon-stat-block__name-link" href="{{monster_url}}">
+                    {{monster_name}}
+                </a>
+            </div>
+            <div class="mon-stat-block__meta">{{monster_type}}, {{monster_alignment}}</div>
+        </div>
+        <div class="mon-stat-block__separator">
+            <img class="mon-stat-block__separator-img" alt="" src="https://www.dndbeyond.com/file-attachments/0/579/stat-block-header-bar.svg">
+        </div>
+        <div class="mon-stat-block__attributes">
+            <div class="mon-stat-block__attribute">
+                <span class="mon-stat-block__attribute-label">Armor Class</span>
+                <span class="mon-stat-block__attribute-value">
+                    <span class="mon-stat-block__attribute-data-value">{{armor_class}}</span>
+                    <span class="mon-stat-block__attribute-data-extra">{{armor_type}}</span>
+                </span>
+            </div>
+            <div class="mon-stat-block__attribute">
+                <span class="mon-stat-block__attribute-label">Hit Points</span>
+                <span class="mon-stat-block__attribute-data">
+                    <span class="mon-stat-block__attribute-data-value">{{hit_points}}</span>
+                    <span class="mon-stat-block__attribute-data-extra">{{hit_dice}}</span>
+                </span>
+            </div>
+            <div class="mon-stat-block__attribute">
+                <span class="mon-stat-block__attribute-label">Speed</span>
+                <span class="mon-stat-block__attribute-data">
+                    <span class="mon-stat-block__attribute-data-value">{{speed}}</span>
+                </span>
+            </div>
+        </div>
+        <div class="mon-stat-block__stat-block">
+            <div class="mon-stat-block__separator">
+                <img class="mon-stat-block__separator-img" alt="" src="https://www.dndbeyond.com/file-attachments/0/579/stat-block-header-bar.svg">
+            </div>
+            <div class="ability-block">
+                <table class="ability-table">
+                    <tr>
+                        <th>STR <p>{{strength}}</p></th>
+                        <th>DEX <p>{{dexterity}}</p></th>
+                        <th>CON <p>{{constitution}}</p></th>
+                    </tr>
+                    <tr>
+                        <th>INT <p>{{intelligence}}</p></th>
+                        <th>WIS <p>{{wisdom}}</p></th>
+                        <th>CHA <p>{{charisma}}</p></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="mon-stat-block__separator">
+                <img class="mon-stat-block__separator-img" alt="" src="https://www.dndbeyond.com/file-attachments/0/579/stat-block-header-bar.svg">
+            </div>
+        </div>
+        <div class="mon-stat-block__tidbits">
+            <div class="mon-stat-block__tidbit">
+                <span class="mon-stat-block__tidbit-label">Senses</span>
+                <span class="mon-stat-block__tidbit-data">
+                    <a class="tooltip-hover sense-tooltip" href="{{darkvision_url}}" data-tooltip-href="//www.dndbeyond.com/senses/2-tooltip?disable-webm=1&amp;disable-webm=1">{{darkvision}}</a>, Passive Perception {{passive_perception}}
+                </span>
+            </div>
+            <div class="mon-stat-block__tidbit">
+                <span class="mon-stat-block__tidbit-label">Languages</span>
+                <span class="mon-stat-block__tidbit-data">{{languages}}</span>
+            </div>
+            <div class="mon-stat-block__tidbit-container">
+                <div class="mon-stat-block__tidbit">
+                    <span class="mon-stat-block__tidbit-label">Challenge</span>
+                    <span class="mon-stat-block__tidbit-data">{{challenge}}</span>
+                </div>
+                <div class="mon-stat-block__tidbit-spacer"></div>
+                <div class="mon-stat-block__tidbit">
+                    <span class="mon-stat-block__tidbit-label">Proficiency Bonus</span>
+                    <span class="mon-stat-block__tidbit-data">{{proficiency_bonus}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="mon-stat-block__separator">
+            <img class="mon-stat-block__separator-img" alt="" src="https://www.dndbeyond.com/file-attachments/0/579/stat-block-header-bar.svg">
+        </div>
+        <div class="mon-stat-block__description-blocks">
+            <div class="mon-stat-block__description-block"> 
+                <div class="mon-stat-block__description-block-content">
+                    <p><strong><em>{{special_ability_name}}</em></strong> {{special_ability_description}}</p>                
+                </div>
+            </div>
+            <div class="mon-stat-block__description-block">
+                <div class="mon-stat-block__description-block-heading">Actions</div>
+                <div class="mon-stat-block__description-block-content">
+                    <p><em><strong>{{action_name_1}}</strong></em> {{action_name_1_description}}</p>
+                    <p><em><strong>{{action_name}}</strong> {{action_description}}:</em> <span data-dice-notation="{{hit_roll}}" data-roll-type="to_hit" data-roll-action="{{action_name}}">{{hit_modifier}}</span> to hit, reach {{reach_distance}} ft., one target. <em>Hit:</em> {{damage_amount}} <span data-dice-notation="{{damage_roll}}" data-roll-type="damage" data-roll-action="{{action_name}}" data-roll-damage-type="{{damage_type}}">({{damage_roll}})</span> {{damage_type}} damage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="populateContent.js"></script>
+</body>
+</html>
