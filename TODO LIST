@@ -1,0 +1,36 @@
+NPC:
+Armour class
+
+hit points
+
+speed (ft)
+
+STR, DEX, CON, INT, WIS, CHA
+	Ability modifiers - DONE
+
+Saving Throws Modifier - Dex, Con, Wis, Cha
+
+Skills - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival] CREATIVE
+
+Senses - Passive Perception (Wisdom) + [Blindsight, Darkvision, Tremorsense, Truesight]
+
+Languages - Lots CREATIVE
+
+Challenge - 1 to 30: Depending on creature stats
+	XP is a dict DONE
+
+CHATGPT API:
+1. Add parameter to message to allow for custom inputs:
+	Character name
+	Traits about the character
+	NPC vs. Monster
+2. Open input_dict from instructions.json
+3. Export returned dict to character.json
+4. Allow multiple character sheets
+5. Battle page
+   1. Going to need to add player details
+
+After ChatGPT API is complete, move on to implementing into webserver. I want it to update live -> Jango or Flask
+
+BUGS:
+Abilitys are missing modifiers STR 13 --- Expected STR 13 (+4)
