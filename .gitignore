@@ -1,3 +1,5 @@
 .env
 /pdfs
 .DS_Store
+*webp
+/archieve characters
